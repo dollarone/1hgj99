@@ -1,5 +1,4 @@
-# Gotta catch 'em all
-a game made for the 99th onehourgamejam.com
+# Phaser using ES6 and webpack - base code project
+Includes tiled init and basic player platformer controls
 
-control with mouse + mouse buttons
-r to restart
+r to restart (best feature)

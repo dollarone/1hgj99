@@ -2,24 +2,21 @@ class Preload extends Phaser.State {
 
 	preload() {
 		/* Preload required assets */
-		this.game.load.image('ball', 'assets/ball.png');
-		this.game.load.image('ball2', 'assets/ball2.png');
-		this.game.load.image('bucket', 'assets/bucket.png');
-		this.game.load.image('bucket_front', 'assets/bucket_front.png');
-		this.game.load.image('hairdryer', 'assets/hairdryer.png');
-
-		this.game.load.spritesheet('logo-tiles', 'assets/logo-tiles.png', 17, 16);
-		this.game.load.audio('dollarone', 'assets/dollarone.ogg');
-		this.game.load.image('onehourgamejamlogo', 'assets/onehourgamejamlogo.png');
-		this.game.load.audio('onehourgamejamsplash', 'assets/onehourgamejamsplash.ogg');
-		//this.game.load.atlas('myAtlas', 'assets/my-atlas.png', 'assets/my-atlas.json');
+		this.game.load.spritesheet('logo-tiles', 'assets/gfx/logo-tiles.png', 17, 16)
+		this.game.load.spritesheet('chars', 'assets/gfx/chars.png', 32, 32)
+		this.game.load.spritesheet('tiles', 'assets/gfx/tiles.png', 16, 16)
+		this.game.load.audio('dollarone', 'assets/sfx/dollarone.ogg')
+		this.game.load.image('onehourgamejamlogo', 'assets/gfx/onehourgamejamlogo.png')
+		this.game.load.audio('onehourgamejamsplash', 'assets/sfx/onehourgamejamsplash.ogg')
+		//this.game.load.atlas('myAtlas', 'assets/my-atlas.png', 'assets/my-atlas.json')
+		this.game.load.tilemap('level', 'assets/tilemaps/level.json', null, Phaser.Tilemap.TILED_JSON)
 	}
 
 	create() {
-		//this.game.state.start("Logo");
-		this.game.state.start("Logo", true, false, "#98FB98");
+		//this.game.state.start("Logo")
+		this.game.state.start("Logo", true, false, "#98FB98")
 	}
 
 }
 
-export default Preload;
+export default Preload
